@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`homepage must be correctly rendered 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <div
+      aria-label="Fatnezz logo"
+      class="logo"
+      role="img"
+    />
+  </header>
+  <h1>
+    Página home inicial
+  </h1>
+</div>
+`;
