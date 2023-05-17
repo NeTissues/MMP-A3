@@ -26,9 +26,15 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm start
-    - run: npm test
+    - name: Clean install NPM
+      working-directory: ./frontend
+      run: npm ci
+    - name: Start NPM
+      working-directory: ./frontend
+      run: npm start
+    - name: Run NPM Tests
+      working-directory: ./frontend
+      run: npm test
     
   build:
     needs: test
@@ -46,5 +52,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
+    - name: Clean install NPM
+      working-directory: ./frontend
+      run: npm ci
+    - name: BUild Project
+      working-directory: ./frontend
+      run: npm run build --if-present    
