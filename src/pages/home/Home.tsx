@@ -1,12 +1,16 @@
 import Header from "../../components/Header/Header";
 import React from "react";
 import Footer from "../../components/Footer/Footer";
+import Form from "../../components/Form/Form";
+import "./Home.css"
 
 const home = () => {
     return (
         <>
             <Header/>
-            <h1>Página home inicial</h1>
+            <div className={"home-container"}>
+                <Form/>
+            </div>
             <Footer/>
         </>
     )

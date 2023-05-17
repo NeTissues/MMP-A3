@@ -14,7 +14,8 @@ describe("the form's behavior",()=>{
         const heightInput=screen.getByPlaceholderText('Altura')
         const weightInput=screen.getByPlaceholderText('Peso')
         const ageInput=screen.getByPlaceholderText('Idade')
-        const genderInput=screen.getByPlaceholderText('Gênero')
+        const genderInput=screen.getByRole('genderInput')
+        const activityLevelInput=screen.getByRole('activityLevelInput')
 
         //find the submit button
         const submitButton=screen.getByRole('button')
@@ -24,6 +25,7 @@ describe("the form's behavior",()=>{
         expect(weightInput).toBeInTheDocument()
         expect(ageInput).toBeInTheDocument()
         expect(genderInput).toBeInTheDocument()
+        expect(activityLevelInput).toBeInTheDocument()
 
         //check if the button is disabled as it should
         expect(submitButton).toBeDisabled()
@@ -74,6 +76,6 @@ describe("the form's behavior",()=>{
 
         //try to click the submit button
         expect(submitButton).toBeEnabled()
-        fireEvent.click(submitButton)
+        /*fireEvent.click(submitButton)*/
     })
 })

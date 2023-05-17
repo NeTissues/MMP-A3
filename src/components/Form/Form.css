@@ -1,0 +1,35 @@
+.group-input-btn{
+    padding: 20px;
+    padding-right: 50px;
+    border:2px solid black;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.22);
+}
+
+input, select {
+    width:100%;
+    padding: 10px;
+    margin:5px;
+    border:2px solid black;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.22);
+    display:block;
+}
+
+select {
+    width: 110%;
+}
+
+button{
+    margin-top: 10px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+button:disabled{
+    background-color: gray;
+}
