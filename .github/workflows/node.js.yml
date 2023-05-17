@@ -23,7 +23,7 @@ jobs:
     - name: Clean install NPM
       run: npm ci
     - name: Run NPM Tests
-      run: npm test
+      run: npm run test -- -u
     
   build:
     needs: test
