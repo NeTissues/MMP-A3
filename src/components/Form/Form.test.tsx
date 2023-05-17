@@ -14,8 +14,8 @@ describe("the form's behavior",()=>{
         const heightInput=screen.getByPlaceholderText('Altura')
         const weightInput=screen.getByPlaceholderText('Peso')
         const ageInput=screen.getByPlaceholderText('Idade')
-        const genderInput=screen.getByRole('genderInput')
-        const activityLevelInput=screen.getByRole('activityLevelInput')
+        const genderInput=screen.getByPlaceholderText('genderInput')
+        const activityLevelInput=screen.getByPlaceholderText('activityLevelInput')
 
         //find the submit button
         const submitButton=screen.getByRole('button')
@@ -41,8 +41,8 @@ describe("the form's behavior",()=>{
         const heightInput=screen.getByPlaceholderText('Altura')
         const weightInput=screen.getByPlaceholderText('Peso')
         const ageInput=screen.getByPlaceholderText('Idade')
-        const genderInput=screen.getByRole('genderInput')
-        const activityLevelInput=screen.getByRole('activityLevelInput')
+        const genderInput=screen.getByPlaceholderText('genderInput')
+        const activityLevelInput=screen.getByPlaceholderText('activityLevelInput')
 
         //find the submit button
         const submitButton=screen.getByRole('button')

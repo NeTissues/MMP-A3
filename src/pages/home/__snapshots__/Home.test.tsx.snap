@@ -11,8 +11,83 @@ exports[`homepage must be correctly rendered 1`] = `
       role="img"
     />
   </header>
-  <h1>
-    Página home inicial
-  </h1>
+  <div
+    class="home-container"
+  >
+    <form>
+      <div
+        class="group-input-btn"
+      >
+        <input
+          placeholder="Peso"
+          type="text"
+          value=""
+        />
+        <input
+          placeholder="Altura"
+          type="text"
+          value=""
+        />
+        <input
+          placeholder="Idade"
+          type="text"
+          value=""
+        />
+        <select
+          placeholder="genderInput"
+        >
+          <option
+            value="0"
+          >
+            Selecione
+          </option>
+          <option
+            value="1"
+          >
+            Feminino
+          </option>
+          <option
+            value="2"
+          >
+            Masculino
+          </option>
+        </select>
+        <select
+          placeholder="activityLevelInput"
+        >
+          <option
+            value="0"
+          >
+            Selecione
+          </option>
+          <option
+            value="1"
+          >
+            Baixo
+          </option>
+          <option
+            value="2"
+          >
+            Médio
+          </option>
+          <option
+            value="3"
+          >
+            Alto
+          </option>
+        </select>
+        <button
+          disabled=""
+        >
+          Calcular
+        </button>
+      </div>
+    </form>
+  </div>
+  <footer
+    class="footer"
+  >
+    Fatneez© Todos os direitos reservados
+  </footer>
 </div>
 `;

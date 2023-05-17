@@ -34,7 +34,7 @@ const Form = () => {
             <select
                 value={gender}
                 onChange={event => setGender(parseInt(event.target.value))}
-                role={'genderInput'}
+                placeholder={'genderInput'}
             >
                 <option value="0">Selecione</option>
                 <option value="1">Feminino</option>
@@ -43,14 +43,14 @@ const Form = () => {
             <select
                 value={activityLevel}
                 onChange={event => setActivityLevel(parseInt(event.target.value))}
-                role={'activityLevelInput'}
+                placeholder={'activityLevelInput'}
             >
                 <option value="0">Selecione</option>
                 <option value="1">Baixo</option>
                 <option value="2">Médio</option>
                 <option value="3">Alto</option>
             </select>
-            <button disabled={!weight||!height||(!gender||gender==0)||(!activityLevel||activityLevel==0)||!age}>Calcular</button>
+            <button disabled={!weight||!height||(!gender||gender===0)||(!activityLevel||activityLevel===0)||!age}>Calcular</button>
         </div>
     </form>)
 }
