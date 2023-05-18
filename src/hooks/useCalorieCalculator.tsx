@@ -1,7 +1,7 @@
 import { useSetRecoilState } from "recoil"
 import { calorieCountState } from "./atom"
 
-export const useCalculus= () => {
+export const useCalorieCalculator= () => {
     
     const setCalorieCount=useSetRecoilState(calorieCountState)
     

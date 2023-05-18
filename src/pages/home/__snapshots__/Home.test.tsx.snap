@@ -98,6 +98,17 @@ exports[`homepage must be correctly rendered 1`] = `
           type="text"
           value="0"
         />
+        <label
+          id="bmi-count"
+        >
+          Indice de massa corporal
+        </label>
+        <input
+          aria-labelledby="bmi-count"
+          disabled=""
+          type="text"
+          value="0"
+        />
       </div>
     </div>
   </div>

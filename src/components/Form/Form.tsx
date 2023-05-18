@@ -1,7 +1,10 @@
 import { useRef, useState } from "react"
 import './Form.css'
-import { useCalculus } from "../../hooks/useCalculus"
-import { useCalorieCountValue } from "../../hooks/useResult"
+import { useCalorieCalculator } from "../../hooks/useCalorieCalculator"
+import { useCalorieCountValue } from "../../hooks/useCalorieCalcResult"
+
+import { useBMICalculator } from "../../hooks/useBMICalculator"
+import { useBMICalcResult } from "../../hooks/useBMICalcResult";
 
 const Form = () => {
     const [weight,setWeight] = useState('')
@@ -12,11 +15,15 @@ const Form = () => {
     const inputRef = useRef<HTMLInputElement>(null)
     const [results,setResults] = useState<undefined|number>(useCalorieCountValue())
 
-    const calculate = useCalculus()
+    const [resultsBMI,setBMIResults] = useState<undefined|number>(useBMICalcResult())
+
+    const calculate = useCalorieCalculator()
+    const bmi = useBMICalculator()
     
     const calculateEquations = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         setResults(calculate(weight,height,age,gender,activityLevel))
+        setBMIResults(bmi(weight,height))
     }
 
     return (<div className="container">
@@ -65,6 +72,9 @@ const Form = () => {
                 <div className="group-input-result">
                     <label id="calorie-count">Calorias diárias recomendadas</label>
                     <input type="text" aria-labelledby='calorie-count' value={results} disabled/>
+
+                    <label id="bmi-count">Indice de massa corporal</label>
+                    <input type="text" aria-labelledby='bmi-count' value={resultsBMI} disabled/>
                 </div>
             </div>)
 }
