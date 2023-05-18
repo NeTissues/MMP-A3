@@ -31,7 +31,7 @@ describe("the form's behavior",()=>{
         expect(submitButton).toBeDisabled()
     })
 
-    test('submit button must be enabled if fields are filled',()=>{
+    test('submit button must be enabled if fields are filled, and form must return correct values upon submission',()=>{
         //render the form component
         render(<RecoilRoot>
             <Form/>
@@ -43,6 +43,7 @@ describe("the form's behavior",()=>{
         const ageInput=screen.getByPlaceholderText('Idade')
         const genderInput=screen.getByPlaceholderText('genderInput')
         const activityLevelInput=screen.getByPlaceholderText('activityLevelInput')
+        const calorieCount=screen.getByLabelText('Calorias diárias recomendadas')
 
         //find the submit button
         const submitButton=screen.getByRole('button')
@@ -55,12 +56,12 @@ describe("the form's behavior",()=>{
         })
         fireEvent.change(weightInput,{
             target:{
-                value: '115,5'
+                value: '115'
             }
         })
         fireEvent.change(ageInput,{
             target:{
-                value: '29'
+                value: '25'
             }
         })
         fireEvent.change(genderInput,{
@@ -76,6 +77,7 @@ describe("the form's behavior",()=>{
 
         //try to click the submit button
         expect(submitButton).toBeEnabled()
-        /*fireEvent.click(submitButton)*/
+        fireEvent.click(submitButton)
+        expect(calorieCount).toHaveValue('1957.75')
     })
 })
