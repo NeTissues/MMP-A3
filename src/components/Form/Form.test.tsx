@@ -44,6 +44,8 @@ describe("the form's behavior",()=>{
         const genderInput=screen.getByPlaceholderText('genderInput')
         const activityLevelInput=screen.getByPlaceholderText('activityLevelInput')
         const calorieCount=screen.getByLabelText('Calorias diárias recomendadas')
+        const bmiCount=screen.getByLabelText('Indice de massa corporal')
+
 
         //find the submit button
         const submitButton=screen.getByRole('button')
@@ -79,5 +81,6 @@ describe("the form's behavior",()=>{
         expect(submitButton).toBeEnabled()
         fireEvent.click(submitButton)
         expect(calorieCount).toHaveValue('1957.75')
+        expect(bmiCount).toHaveValue('37.55')
     })
 })
