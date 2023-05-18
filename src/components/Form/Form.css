@@ -1,8 +1,24 @@
+.container {
+    display: flex;
+}
+
 .group-input-btn{
+    flex: 1;
     padding: 20px;
     padding-right: 50px;
     border:2px solid black;
     box-shadow: 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.group-input-result{
+    flex: 1;
+    margin-left: 50px;
+}
+
+.group-input-result label{ 
+    display: block; 
+    width: 200%; 
+    margin-left: 10px;
 }
 
 input, select {
