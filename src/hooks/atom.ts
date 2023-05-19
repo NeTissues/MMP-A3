@@ -9,3 +9,8 @@ export const bmiCountState=atom<number>({
     key: 'bmi',
     default: 0
 })
+
+export const bmrCountState=atom<number>({
+    key: 'bmrCountState',
+    default: 0
+})

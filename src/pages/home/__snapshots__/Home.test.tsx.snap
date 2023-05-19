@@ -109,6 +109,17 @@ exports[`homepage must be correctly rendered 1`] = `
           type="text"
           value="0"
         />
+        <label
+          id="bmr-count"
+        >
+          Taxa metabólica basal
+        </label>
+        <input
+          aria-labelledby="bmr-count"
+          disabled=""
+          type="text"
+          value="0"
+        />
       </div>
     </div>
   </div>
