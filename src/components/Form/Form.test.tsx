@@ -81,7 +81,7 @@ describe("the form's behavior",()=>{
         //try to click the submit button
         expect(submitButton).toBeEnabled()
         fireEvent.click(submitButton)
-        expect(calorieCount).toHaveValue('1957.75')
+        expect(calorieCount).toHaveValue('2288.75')
         expect(bmiCount).toHaveValue('37.55')
         expect(bmrCount).toHaveValue('1957.75')
     })
