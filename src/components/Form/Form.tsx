@@ -7,6 +7,8 @@ import { useBMICalculator } from "../../hooks/useBMICalculator"
 import { useBMICalcResult } from "../../hooks/useBMICalcResult";
 import { useBMRCalculator } from "../../hooks/useBMRCalculator"
 import { useBMRCountValue } from "../../hooks/useBMRCalcResult"
+import { useIdealWeightValue } from "../../hooks/useIdealWeightResult"
+import { useIdealWeightCalculator } from "../../hooks/useIdealWeightCalculator"
 
 const Form = () => {
     const [weight,setWeight] = useState('')
@@ -19,16 +21,19 @@ const Form = () => {
     const [results,setResults] = useState<undefined|number>(useCalorieCountValue())
     const [resultsBMI,setBMIResults] = useState<undefined|number>(useBMICalcResult())
     const [resultsBMR,setBMRResults] = useState<undefined|number>(useBMRCountValue())
+    const [resultsIW,setIWResults] = useState<undefined|number>(useIdealWeightValue())
 
     const calculate = useCalorieCalculator()
     const bmi = useBMICalculator()
     const bmr = useBMRCalculator()
+    const iw = useIdealWeightCalculator()
     
     const calculateEquations = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         setResults(calculate(weight,height,age,gender,activityLevel))
         setBMIResults(bmi(weight,height))
         setBMRResults(bmr(weight,height,age,gender,activityLevel))
+        setIWResults(iw(height,gender))
     }
 
     return (<div className="container">
@@ -83,6 +88,9 @@ const Form = () => {
 
                     <label id="bmr-count">Taxa metabólica basal</label>
                     <input type="text" aria-labelledby='bmr-count' value={resultsBMR} disabled/>
+
+                    <label id="ideal-weight">Peso ideal</label>
+                    <input type="text" aria-labelledby='ideal-weight' value={resultsIW} disabled/>
                 </div>
             </div>)
 }

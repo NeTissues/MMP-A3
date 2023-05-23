@@ -14,3 +14,8 @@ export const bmrCountState=atom<number>({
     key: 'bmrCountState',
     default: 0
 })
+
+export const idealWeightState=atom<number>({
+    key: 'idealWeightState',
+    default: 0
+})
