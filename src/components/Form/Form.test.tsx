@@ -46,6 +46,7 @@ describe("the form's behavior",()=>{
         const calorieCount=screen.getByLabelText('Calorias diárias recomendadas')
         const bmiCount=screen.getByLabelText('Indice de massa corporal')
         const bmrCount=screen.getByLabelText('Taxa metabólica basal')
+        const idealWeight=screen.getByLabelText('Peso ideal')
 
 
         //find the submit button
@@ -84,5 +85,6 @@ describe("the form's behavior",()=>{
         expect(calorieCount).toHaveValue('2288.75')
         expect(bmiCount).toHaveValue('37.55')
         expect(bmrCount).toHaveValue('1957.75')
+        expect(idealWeight).toHaveValue('59.89')
     })
 })
