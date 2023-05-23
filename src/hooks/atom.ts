@@ -19,3 +19,8 @@ export const bfpCountState=atom<number>({
     key: 'bfpCountState',
     default: 0
 })
+
+export const idealWeightState=atom<number>({
+    key: 'idealWeightState',
+    default: 0
+})
