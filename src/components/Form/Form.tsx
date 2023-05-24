@@ -41,66 +41,75 @@ const Form = () => {
         setIWResults(iw(height,gender))
     }
 
-    return (<div className="container">
-                <form className="group-input-btn" onSubmit={calculateEquations}>
-                    <div>
-                        <input
-                            ref={inputRef}
-                            onChange={event => setWeight(event.target.value)}
-                            type="text"
-                            placeholder="Peso"
-                        />
-                        <input
-                            ref={inputRef}
-                            onChange={event => setHeight(parseInt(event.target.value))}
-                            type="text"
-                            placeholder="Altura"
-                        />
-                        <input
-                            ref={inputRef}
-                            onChange={event => setAge(parseFloat(event.target.value))}
-                            type="text"
-                            placeholder="Idade"
-                        />
-                        <select
-                            value={gender}
-                            onChange={event => setGender(parseInt(event.target.value))}
-                            placeholder={'genderInput'}
-                        >
-                            <option value="0">Selecione</option>
-                            <option value="1">Feminino</option>
-                            <option value="2">Masculino</option>
-                        </select>
-                        <select
-                            value={activityLevel}
-                            onChange={event => setActivityLevel(parseInt(event.target.value))}
-                            placeholder={'activityLevelInput'}
-                        >
-                            <option value="0">Selecione</option>
-                            <option value="1">Baixo</option>
-                            <option value="2">Médio</option>
-                            <option value="3">Alto</option>
-                        </select>
-                        <button type="submit" disabled={!weight||!height||(!gender||gender===0)||(!activityLevel||activityLevel===0)||!age}>Calcular</button>
+    return (
+    
+            <section>
+                <h1>Calculadora Fitness</h1>
+                <div className="container">           
+                    <form className="group-input-btn" onSubmit={calculateEquations}>
+                        <div>
+                            <input
+                                ref={inputRef}
+                                onChange={event => setWeight(event.target.value)}
+                                type="text"
+                                placeholder="Peso"
+                            />
+                            <input
+                                ref={inputRef}
+                                onChange={event => setHeight(parseInt(event.target.value))}
+                                type="text"
+                                placeholder="Altura"
+                            />
+                            <input
+                                ref={inputRef}
+                                onChange={event => setAge(parseFloat(event.target.value))}
+                                type="text"
+                                placeholder="Idade"
+                            />
+                            <select
+                                value={gender}
+                                onChange={event => setGender(parseInt(event.target.value))}
+                                placeholder={'genderInput'}
+                            >
+                                <option value="0">Selecione</option>
+                                <option value="1">Feminino</option>
+                                <option value="2">Masculino</option>
+                            </select>
+                            <select
+                                value={activityLevel}
+                                onChange={event => setActivityLevel(parseInt(event.target.value))}
+                                placeholder={'activityLevelInput'}
+                            >
+                                <option value="0">Selecione</option>
+                                <option value="1">Baixo</option>
+                                <option value="2">Médio</option>
+                                <option value="3">Alto</option>
+                            </select>
+                            <button type="submit" disabled={!weight||!height||(!gender||gender===0)||(!activityLevel||activityLevel===0)||!age}>Calcular</button>
+                        </div>
+                    </form>
+                    <div className="group-input-result">
+                        <label id="calorie-count">Calorias diárias recomendadas</label>
+                        <input type="text" aria-labelledby='calorie-count' value={results} disabled/>
+
+                        <label id="bmi-count">Indice de massa corporal</label>
+                        <input type="text" aria-labelledby='bmi-count' value={resultsBMI} disabled/>
+
+                        <label id="bmr-count">Taxa metabólica basal</label>
+                        <input type="text" aria-labelledby='bmr-count' value={resultsBMR} disabled/>
+
+                        <label id="bfp-count">Percentual de gordura corporal</label>
+                        <input type="text" aria-labelledby='bfp-count' value={resultsBFP} disabled/>
+
+                        <label id="ideal-weight">Peso ideal</label>
+                        <input type="text" aria-labelledby='ideal-weight' value={resultsIW} disabled/>
                     </div>
-                </form>
-                <div className="group-input-result">
-                    <label id="calorie-count">Calorias diárias recomendadas</label>
-                    <input type="text" aria-labelledby='calorie-count' value={results} disabled/>
-
-                    <label id="bmi-count">Indice de massa corporal</label>
-                    <input type="text" aria-labelledby='bmi-count' value={resultsBMI} disabled/>
-
-                    <label id="bmr-count">Taxa metabólica basal</label>
-                    <input type="text" aria-labelledby='bmr-count' value={resultsBMR} disabled/>
-
-                    <label id="bfp-count">Percentual de gordura corporal</label>
-                    <input type="text" aria-labelledby='bfp-count' value={resultsBFP} disabled/>
-
-                    <label id="ideal-weight">Peso ideal</label>
-                    <input type="text" aria-labelledby='ideal-weight' value={resultsIW} disabled/>
                 </div>
-            </div>)
+                <br/><br/><br/>
+                <p>Esta calculadora faz parte de um projeto acadêmico, os dados fornecidos pelos usuários não são salvos em momento algum.</p>
+                <p>Nenhum usuário deveria utilizar as informações encontradas nesse site para tomar qualquer ação, principalmente relacionado a sua saúde.</p>
+                <p>Os desenvolvedores desta aplicação não se responsabilizam por qualquer incidente que venha ocorrer com qualquer usuário que acesse essa plataforma.</p>
+            </section>)
 }
 
 export default Form

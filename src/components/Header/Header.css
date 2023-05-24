@@ -2,13 +2,37 @@
     display: flex;
     justify-content: left;
     padding: 20px;
-    background-color: gray;
+    background: rgb(227,227,227);
+    background: linear-gradient(90deg, rgba(227,227,227,1) 0%, rgba(131,131,131,1) 35%, rgba(38,38,38,1) 100%);
 }
 
+
 .logo {
-    background-image: url("../../assets/images/logo.png");
-    width: 170px;
-    height: 125px;
+    width: 300px;
+    height: 80px;
+}
+
+.logo>img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.links{
+   width: 100%;
+   position: fixed;
+   right: 0;
+   text-align: right;
+   top: 5%;
+}
+
+.links a{
+   display: inline-block;
+   font-size: 20px;
+   color: White;
+   text-align: center;      
+   margin-right: 20px;
+   text-decoration: none;
 }
 
 @media screen and (max-width: 800px) {
