@@ -9,135 +9,208 @@ exports[`homepage must be correctly rendered 1`] = `
       aria-label="Fatnezz logo"
       class="logo"
       role="img"
-    />
+    >
+      <img
+        alt="Fatnezz logo"
+        src="logo.png"
+      />
+      <div
+        class="links"
+      >
+        <a
+          href="https://github.com/NeTissues/MMP-A3"
+          target="new"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://docs.google.com/document/d/10phpnk8_aTeu-kZvOPCPXE8M0nzZlL-4mSVX5VIFPwo/edit"
+          target="new"
+        >
+          Documento de requisitos
+        </a>
+        <a
+          href="https://docs.google.com/presentation/d/1ruCJm5hinm5WhwFxxh_l_qbtAzAXGAehoYAukndXUQI/edit?usp=sharing"
+          target="new"
+        >
+          PowerPoint
+        </a>
+      </div>
+    </div>
   </header>
   <div
     class="home-container"
   >
-    <div
-      class="container"
-    >
-      <form
-        class="group-input-btn"
-      >
-        <div>
-          <input
-            placeholder="Peso"
-            type="text"
-          />
-          <input
-            placeholder="Altura"
-            type="text"
-          />
-          <input
-            placeholder="Idade"
-            type="text"
-          />
-          <select
-            placeholder="genderInput"
-          >
-            <option
-              value="0"
-            >
-              Selecione
-            </option>
-            <option
-              value="1"
-            >
-              Feminino
-            </option>
-            <option
-              value="2"
-            >
-              Masculino
-            </option>
-          </select>
-          <select
-            placeholder="activityLevelInput"
-          >
-            <option
-              value="0"
-            >
-              Selecione
-            </option>
-            <option
-              value="1"
-            >
-              Baixo
-            </option>
-            <option
-              value="2"
-            >
-              Médio
-            </option>
-            <option
-              value="3"
-            >
-              Alto
-            </option>
-          </select>
-          <button
-            disabled=""
-            type="submit"
-          >
-            Calcular
-          </button>
-        </div>
-      </form>
+    <section>
+      <h1>
+        Calculadora Fitness
+      </h1>
       <div
-        class="group-input-result"
+        class="container"
       >
-        <label
-          id="calorie-count"
+        <form
+          class="group-input-btn"
         >
-          Calorias diárias recomendadas
-        </label>
-        <input
-          aria-labelledby="calorie-count"
-          disabled=""
-          type="text"
-          value="0"
-        />
-        <label
-          id="bmi-count"
+          <div>
+            <input
+              placeholder="Peso"
+              type="text"
+            />
+            <input
+              placeholder="Altura"
+              type="text"
+            />
+            <input
+              placeholder="Idade"
+              type="text"
+            />
+            <select
+              placeholder="genderInput"
+            >
+              <option
+                value="0"
+              >
+                Selecione
+              </option>
+              <option
+                value="1"
+              >
+                Feminino
+              </option>
+              <option
+                value="2"
+              >
+                Masculino
+              </option>
+            </select>
+            <select
+              placeholder="activityLevelInput"
+            >
+              <option
+                value="0"
+              >
+                Selecione
+              </option>
+              <option
+                value="1"
+              >
+                Baixo
+              </option>
+              <option
+                value="2"
+              >
+                Médio
+              </option>
+              <option
+                value="3"
+              >
+                Alto
+              </option>
+            </select>
+            <button
+              disabled=""
+              type="submit"
+            >
+              Calcular
+            </button>
+          </div>
+        </form>
+        <div
+          class="group-input-result"
         >
-          Indice de massa corporal
-        </label>
-        <input
-          aria-labelledby="bmi-count"
-          disabled=""
-          type="text"
-          value="0"
-        />
-        <label
-          id="bmr-count"
-        >
-          Taxa metabólica basal
-        </label>
-        <input
-          aria-labelledby="bmr-count"
-          disabled=""
-          type="text"
-          value="0"
-        />
-        <label
-          id="ideal-weight"
-        >
-          Peso ideal
-        </label>
-        <input
-          aria-labelledby="ideal-weight"
-          disabled=""
-          type="text"
-          value="0"
-        />
+          <label
+            id="calorie-count"
+          >
+            Calorias diárias recomendadas
+          </label>
+          <input
+            aria-labelledby="calorie-count"
+            disabled=""
+            type="text"
+            value="0"
+          />
+          <label
+            id="bmi-count"
+          >
+            Indice de massa corporal
+          </label>
+          <input
+            aria-labelledby="bmi-count"
+            disabled=""
+            type="text"
+            value="0"
+          />
+          <label
+            id="bmr-count"
+          >
+            Taxa metabólica basal
+          </label>
+          <input
+            aria-labelledby="bmr-count"
+            disabled=""
+            type="text"
+            value="0"
+          />
+          <label
+            id="bfp-count"
+          >
+            Percentual de gordura corporal
+          </label>
+          <input
+            aria-labelledby="bfp-count"
+            disabled=""
+            type="text"
+            value="0"
+          />
+          <label
+            id="ideal-weight"
+          >
+            Peso ideal
+          </label>
+          <input
+            aria-labelledby="ideal-weight"
+            disabled=""
+            type="text"
+            value="0"
+          />
+        </div>
       </div>
-    </div>
+      <br />
+      <br />
+      <br />
+      <p>
+        Esta calculadora faz parte de um projeto acadêmico, os dados fornecidos pelos usuários não são salvos em momento algum.
+      </p>
+      <p>
+        Nenhum usuário deveria utilizar as informações encontradas nesse site para tomar qualquer ação, principalmente relacionado a sua saúde.
+      </p>
+      <p>
+        Os desenvolvedores desta aplicação não se responsabilizam por qualquer incidente que venha ocorrer com qualquer usuário que acesse essa plataforma.
+      </p>
+    </section>
   </div>
   <footer
     class="footer"
   >
-    Fatneez© Todos os direitos reservados
+    <p>
+      <a
+        href="https://www.linkedin.com/in/raphaelscandura/"
+        target="new"
+      >
+        Raphael Scandura da Cunha
+      </a>
+    </p>
+    <p>
+      <a
+        href="https://www.linkedin.com/in/thiagomorango/"
+        target="new"
+      >
+        Thiago Gobbo Morango
+      </a>
+    </p>
+    <p>
+      Fatnezz© Todos os direitos reservados
+    </p>
   </footer>
 </div>
 `;
