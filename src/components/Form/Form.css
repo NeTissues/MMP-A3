@@ -3,6 +3,7 @@ section{
     border-radius: 5%;
     padding: 40px;
     background-color: white;
+    margin: 28px 0px;
 }
 
 .container {
@@ -37,13 +38,9 @@ input, select {
     display:block;
 }
 
-select {
-    width: 105%;
-}
-
 button{
     margin-top: 10px;
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 5px 10px;
@@ -55,4 +52,19 @@ button{
 
 button:disabled{
     background-color: gray;
+}
+
+@media screen and (max-width: 1700px) {
+    .container{
+        display: block;
+    }
+
+    .group-input-result{
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .group-input-result input{
+        width: 85%;
+    }
 }

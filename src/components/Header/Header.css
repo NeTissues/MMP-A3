@@ -8,7 +8,7 @@
 
 
 .logo {
-    width: 300px;
+ 
     height: 80px;
 }
 
@@ -20,7 +20,7 @@
 
 .links{
    width: 100%;
-   position: fixed;
+   position:absolute;
    right: 0;
    text-align: right;
    top: 5%;
@@ -35,7 +35,7 @@
    text-decoration: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1700px) {
     .header {
         padding-top: 60px;
         flex-direction: column;
@@ -43,7 +43,20 @@
     }
 
     .logo {
-        width: 235px;
+       
         height: 199px;
+    }
+
+    .links{
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        position: initial;
+        right: initial;
+        top: initial;
+    }
+
+    .links a{
+        margin-top: 5px;
     }
 }
