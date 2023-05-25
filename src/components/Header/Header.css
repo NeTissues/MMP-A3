@@ -8,7 +8,7 @@
 
 
 .logo {
- 
+    width: 25%;
     height: 80px;
 }
 
@@ -58,5 +58,9 @@
 
     .links a{
         margin-top: 5px;
+    }
+
+    .logo{
+        width: 40%;
     }
 }
