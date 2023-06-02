@@ -173,6 +173,17 @@ exports[`homepage must be correctly rendered 1`] = `
             type="text"
             value="0"
           />
+          <label
+            id="tdee"
+          >
+            Gasto total de energia diaria
+          </label>
+          <input
+            aria-labelledby="tdee"
+            disabled=""
+            type="text"
+            value="0"
+          />
         </div>
       </div>
       <br />
