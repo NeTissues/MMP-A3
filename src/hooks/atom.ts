@@ -24,3 +24,8 @@ export const idealWeightState=atom<number>({
     key: 'idealWeightState',
     default: 0
 })
+
+export const tdeeCountState=atom<number>({
+    key: 'tdeeState',
+    default: 0
+})

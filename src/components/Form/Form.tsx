@@ -11,6 +11,8 @@ import { useIdealWeightValue } from "../../hooks/useIdealWeightResult"
 import { useIdealWeightCalculator } from "../../hooks/useIdealWeightCalculator"
 import { useBFPCalculator } from "../../hooks/useBFPCalculator";
 import { useBFPCountValue } from "../../hooks/useBFPCalcResult"
+import { useTDEECalculator } from "../../hooks/useTDEECalculator"
+import { useTDEECountValue } from "../../hooks/useTDEECalcResult"
 
 const Form = () => {
     const [weight,setWeight] = useState('')
@@ -25,12 +27,14 @@ const Form = () => {
     const [resultsBMR,setBMRResults] = useState<undefined|number>(useBMRCountValue())
     const [resultsBFP,setBFPResults] = useState<undefined|number>(useBFPCountValue())
     const [resultsIW,setIWResults] = useState<undefined|number>(useIdealWeightValue())
+    const [resultsTDEE,setTDEEResults] = useState<undefined|number>(useTDEECountValue())
 
     const calculate = useCalorieCalculator()
     const bmi = useBMICalculator()
     const bmr = useBMRCalculator()
     const bfp = useBFPCalculator()
     const iw = useIdealWeightCalculator()
+    const tdee = useTDEECalculator()
 
     const calculateEquations = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
@@ -39,6 +43,7 @@ const Form = () => {
         setBMRResults(bmr(weight,height,age,gender,activityLevel))
         setBFPResults(bfp(weight,height,age,gender))
         setIWResults(iw(height,gender))
+        setTDEEResults(tdee(weight,height,age,gender,activityLevel))
     }
 
     return (
@@ -103,6 +108,9 @@ const Form = () => {
 
                         <label id="ideal-weight">Peso ideal</label>
                         <input type="text" aria-labelledby='ideal-weight' value={resultsIW} disabled/>
+
+                        <label id="tdee">Gasto total de energia diaria</label>
+                        <input type="text" aria-labelledby='tdee' value={resultsTDEE} disabled/>
                     </div>
                 </div>
                 <br/><br/><br/>

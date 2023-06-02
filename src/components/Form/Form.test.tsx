@@ -48,6 +48,7 @@ describe("the form's behavior",()=>{
         const bmrCount=screen.getByLabelText('Taxa metabólica basal')
         const bfpCount=screen.getByLabelText('Percentual de gordura corporal')
         const idealWeight=screen.getByLabelText('Peso ideal')
+        const tdeecount=screen.getByPlaceholderText('Gasto total de energia diaria')
 
 
         //find the submit button
@@ -88,5 +89,6 @@ describe("the form's behavior",()=>{
         expect(bmrCount).toHaveValue('1957.75')
         expect(idealWeight).toHaveValue('59.89')
         expect(bfpCount).toHaveValue('45.41')
+        expect(tdeecount).toHaveValue('2691.90625')
     })
 })
